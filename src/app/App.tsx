@@ -3,6 +3,7 @@ import SetupForm from './SetupForm';
 import Card from './Card';
 import toBinary from '../util/toBinary';
 import fromBinary from '../util/fromBinary';
+import Footer from './Footer';
 
 export type InfoType = { label: string, value: string }[];
 const testData = '[{"label":"Imię","value":"Jaś"},{"label":"Nazwisko","value":"Kapela"},{"label":"NIP","value":"123456789"}]'
@@ -19,9 +20,10 @@ function App() {
   }, []);
 
   return (
-      <div className="App">
-        {info ? <Card data={info}/> : <SetupForm/>}
-      </div>
+    <div className="App">
+      {info ? <Card data={info}/> : <SetupForm/>}
+      {info ? <Footer /> : null}
+    </div>
   );
 }
 
