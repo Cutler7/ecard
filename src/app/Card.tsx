@@ -12,6 +12,7 @@ function Card({ data }: { data: InfoType }) {
   );
 
   return <div>
+    <button onClick={() => window.location.replace(window.location.origin)}>New Card</button>
     <div>{listItems}</div>
     <QrCode/>
   </div>;
