@@ -5,7 +5,7 @@ import toBinary from '../util/toBinary';
 import fromBinary from '../util/fromBinary';
 
 export type InfoType = { label: string, value: string }[];
-const testData = '[{"label":"Imię","value":"Jaś"},{"label":"Nazwisko","value":"Śpiewak"},{"label":"NIP","value":"123456789"}]'
+const testData = '[{"label":"Imię","value":"Jaś"},{"label":"Nazwisko","value":"Kapela"},{"label":"NIP","value":"123456789"}]'
 
 function App() {
 
