@@ -10,19 +10,19 @@ const testData = '[{"label":"Imię","value":"Jaś"},{"label":"Nazwisko","value":
 
 function App() {
 
-  const [info, setInfo] = React.useState<InfoType|null>(null);
+  const [info, setInfo] = React.useState<InfoType>([]);
   console.log(toBinary(testData));
 
   React.useEffect(() => {
     const params = new URLSearchParams(document.location.search);
     const data = fromBinary(params.get('info') || '');
-    setInfo(JSON.parse(data));
+    setInfo(JSON.parse(data || '[]'));
   }, []);
 
   return (
     <div className="App">
-      {info ? <Card data={info}/> : <SetupForm/>}
-      {info ? <Footer /> : null}
+      {info.length ? <Card data={info}/> : <SetupForm/>}
+      {info.length ? <Footer /> : null}
     </div>
   );
 }
