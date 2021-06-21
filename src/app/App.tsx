@@ -3,13 +3,11 @@ import SetupForm from './SetupForm';
 import Card from './Card';
 import toBinary from '../util/toBinary';
 import fromBinary from '../util/fromBinary';
-import Footer from './Footer';
 
 export type InfoType = { label: string, value: string }[];
 const testData = '[{"label":"Imię","value":"Jaś"},{"label":"Nazwisko","value":"Kapela"},{"label":"NIP","value":"123456789"}]'
 
 function App() {
-
   const [info, setInfo] = React.useState<InfoType>([]);
   console.log(toBinary(testData));
 
@@ -22,7 +20,6 @@ function App() {
   return (
     <div className="App">
       {info.length ? <Card data={info}/> : <SetupForm/>}
-      {info.length ? <Footer /> : null}
     </div>
   );
 }

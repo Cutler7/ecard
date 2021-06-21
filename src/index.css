@@ -4,6 +4,10 @@
   --background-lighter: #DDDDDD;
 }
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,18 +17,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background: var(--background);
-}
-
-footer {
-  position: fixed;
-  width: 100vw;
-  bottom: 0;
-  padding: 12px 0 7px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background: var(--background-darker);
 }
 
 .qrcode {
@@ -47,30 +39,4 @@ footer {
 
 .qrcode.expanded img {
   width: calc(100vw - 20px);
-}
-
-.propertyList {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.propertyRow {
-  width: calc(100vw - 20px);
-  background: var(--background-lighter);
-  margin-bottom: 7px;
-  display: flex;
-  flex-direction: column;
-  padding: 6px 6px 8px 6px;
-}
-
-.propertyRow-label {
-  font-size: 14px;
-}
-
-.propertyRow-value {
-  font-size: 24px;
-  margin: 2px 5px 0px 5px;
 }
